@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Priyal ❤️</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <p class="eyebrow">A LITTLE WORLD MADE FOR YOU</p>
+    <div class="hero-heart">♡</div>
+    <h1>Happy Birthday,<br><span>Priyal</span> ❤️</h1>
+    <p class="intro">
+      If I could give you one thing in this world,
+      it would be the chance to see yourself through my eyes.
+    </p>
+    <button class="primary-btn" id="openBtn">
+      Open your surprise ✨
+    </button>
+    <p class="tiny">Made with all my love, just for you</p>
+  </header>
+
+  <main id="surprise" class="hidden">
+    <section class="section music-card">
+      <p class="eyebrow">OUR LITTLE SOUNDTRACK</p>
+      <h2>A song for you 🎵</h2>
+      <p>Press play and let this little moment be ours.</p>
+      <audio controls preload="metadata">
+        <source src="music/our-song.mp3" type="audio/mpeg">
+      </audio>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">LITTLE PIECES OF YOU</p>
+      <h2>My favourite memories 📸</h2>
+      <div class="gallery">
+        <figure class="photo"><img src="images/priyal1.jpg" alt="Priyal 1"><figcaption>Your beautiful smile ♡</figcaption></figure>
+        <figure class="photo"><img src="images/priyal2.jpg" alt="Priyal 2"><figcaption>My favourite person</figcaption></figure>
+        <figure class="photo"><img src="images/priyal3.jpg" alt="Priyal 3"><figcaption>A moment to keep</figcaption></figure>
+        <figure class="photo"><img src="images/priyal4.jpg" alt="Priyal 4"><figcaption>My kind of happiness</figcaption></figure>
+        <figure class="photo"><img src="images/priyal5.jpg" alt="Priyal 5"><figcaption>Always special to me</figcaption></figure>
+        <figure class="photo"><img src="images/priyal6.jpg" alt="Priyal 6"><figcaption>More memories to come ❤️</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section cake-section">
+      <p class="eyebrow">MAKE A WISH, MY LOVE</p>
+      <h2>A cake just for you 🎂</h2>
+      <div class="cake">
+        <div class="flame"></div>
+        <div class="candle"></div>
+        <div class="cake-top"></div>
+        <div class="cake-middle"></div>
+        <div class="cake-bottom"></div>
+      </div>
+      <p id="wishText">Close your eyes, make a wish, and tap below.</p>
+      <button class="primary-btn" id="wishBtn">Make a wish ✨</button>
+    </section>
+
+    <section class="section letter-section">
+      <p class="eyebrow">FROM MY HEART TO YOURS</p>
+      <h2>A little letter for you 💌</h2>
+      <div class="letter">
+        <p>My dearest Priyal, ❤️</p>
+        <p>Happy Birthday, my love. I wish I could be beside you today, see your smile, hold your hand and make this day beautiful for you in person.</p>
+        <p>Sometimes distance makes me wish I could be there when you need a hug, celebrate your happiest moments and make your difficult days easier.</p>
+        <p>You have a special place in my heart. Your happiness genuinely matters to me, and I hope we keep choosing kindness, honesty and understanding, even on difficult days.</p>
+        <p>I wish you peace, reasons to smile, dreams that come true and all the love you deserve. Never forget how special you are. 🥹</p>
+        <p class="signature">Happy Birthday, my love.<br>Always sending you a little piece of my heart. ❤️</p>
+      </div>
+      <button class="primary-btn" id="finalBtn">One last thing, my love… 💗</button>
+      <div id="finalMessage" class="final-message hidden">
+        <h2>You're my favourite hello ❤️</h2>
+        <p>No matter how far apart we are today, someone is thinking of you with so much love.</p>
+        <p>Happy Birthday, Priyal! 🥹</p>
+      </div>
+    </section>
+    <footer>Made with love, just for Priyal ♡</footer>
+  </main>
+  <script>
+    const openBtn = document.getElementById("openBtn");
+    const surprise = document.getElementById("surprise");
+
+    openBtn.addEventListener("click", () => {
+      surprise.classList.remove("hidden");
+      openBtn.disabled = true;
+      surprise.scrollIntoView({ behavior: "smooth" });
+    });
+
+    document.getElementById("wishBtn").addEventListener("click", () => {
+      document.getElementById("wishText").textContent =
+        "May your heart always find reasons to smile, Priyal. ❤️";
+    });
+
+    document.getElementById("finalBtn").addEventListener("click", () => {
+      document.getElementById("finalMessage").classList.remove("hidden");
+      document.getElementById("finalMessage").scrollIntoView({ behavior: "smooth" });
+    });
+  </script>
+</body>
+</html>
